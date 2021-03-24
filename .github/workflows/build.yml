@@ -62,7 +62,6 @@ jobs:
           - tidbit
         cmake-args: [""]
         include:
-          - board: airport_shuttle
           - board: bdn9_rev2
           - board: dz60rgb_rev1
           - board: nrf52840_m2
@@ -78,6 +77,7 @@ jobs:
             shield: kyria_right
             cmake-args: -DCONFIG_ZMK_DISPLAY=y
             skip-archive: true
+          - board: airport_shuttle
     steps:
       - name: Checkout
         uses: actions/checkout@v2
