@@ -17,10 +17,6 @@ jobs:
       image: zmkfirmware/zmk-build-arm:2.4
     strategy:
       matrix:
-        board:
-          
-        shield:
-          
         cmake-args: [""]
         include:
           - board: airport_shuttle
