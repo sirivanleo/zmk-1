@@ -22,7 +22,7 @@ jobs:
           - airport_shuttle
         shield:
           - kyria_left
-          _ kyria_right
+          - kyria_right
         cmake-args: [""]
         include:
           - board: nice_nano
