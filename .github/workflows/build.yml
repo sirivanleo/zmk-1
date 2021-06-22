@@ -17,22 +17,8 @@ jobs:
       image: zmkfirmware/zmk-build-arm:2.4
     strategy:
       matrix:
-        board:
-          - nice_nano
-          - airport_shuttle
-        shield:
-          - kyria_left
-          - kyria_right
         cmake-args: [""]
         include:
-          - board: nice_nano
-            shield: kyria_left
-            cmake-args: -DCONFIG_ZMK_DISPLAY=y
-            skip-archive: true
-          - board: nice_nano
-            shield: kyria_right
-            cmake-args: -DCONFIG_ZMK_DISPLAY=y
-            skip-archive: true
           - board: airport_shuttle
     steps:
       - name: Checkout
